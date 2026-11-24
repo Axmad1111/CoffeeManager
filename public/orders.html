@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новый заказ — CoffeeManager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>CoffeeManager</h2>
+       <nav>
+    <a href="index.html">Главная</a>
+    <a href="menu.html">Меню</a>
+    <a href="orders.html" class="active">Новый заказ</a>
+    <a href="history.html">История заказов</a>
+    <a href="analytics.html">Аналитика</a>
+</nav>
+    </div>
+
+    <main class="main-content">
+        <h1>Оформление заказа</h1>
+        <p>Выберите товары и укажите их количество.</p>
+
+        <section class="stat-card">
+            <h2>Меню товаров</h2>
+            <div id="productList"></div>
+        </section>
+
+        <section class="stat-card" style="margin-top: 20px;">
+            <h2>Текущий заказ</h2>
+
+            <div id="cartList">
+                <p>Корзина пока пуста.</p>
+            </div>
+
+            <h2 id="total">Итого: 0 ₽</h2>
+
+            <button id="createOrderButton" type="button">
+                Оформить заказ
+            </button>
+        </section>
+    </main>
+
+    <script src="orders.js"></script>
+</body>
+</html>

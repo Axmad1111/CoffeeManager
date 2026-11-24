@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню — CoffeeManager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <div class="logo">☕ CoffeeManager</div>
+
+        <a href="/index.html">Панель управления</a>
+        <a href="/menu.html" class="active">Меню</a>
+        <a href="/orders.html">Новый заказ</a>
+        <a href="/history.html">История заказов</a>
+        <a href="/analytics.html">Аналитика</a>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Меню кофейни</h1>
+            <p>Управление товарами и ценами</p>
+        </header>
+
+        <div class="stat-card">
+            <h2>Добавить товар</h2>
+
+            <form id="productForm">
+
+                <p>Название товара</p>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Например, Американо"
+                    required
+                >
+
+                <p>Категория</p>
+                <input
+                    type="text"
+                    id="category"
+                    placeholder="Например, Кофе"
+                    required
+                >
+
+                <p>Цена (руб.)</p>
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="150"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">Добавить товар</button>
+
+            </form>
+        </div>
+
+        <h2 style="margin: 30px 0 15px;">Список товаров</h2>
+
+        <div class="stat-card" style="margin-bottom: 20px;">
+
+            <h3>Поиск и фильтрация</h3>
+
+            <p>Поиск по названию</p>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Введите название товара..."
+            >
+
+            <p>Категория</p>
+            <select id="categoryFilter">
+                <option value="">Все категории</option>
+            </select>
+
+            <p>Сортировка по цене</p>
+            <select id="sortFilter">
+                <option value="default">По умолчанию</option>
+                <option value="asc">Сначала дешёвые</option>
+                <option value="desc">Сначала дорогие</option>
+            </select>
+
+        </div>
+
+        <div id="productList"></div>
+
+    </main>
+
+</div>
+
+<script src="menu.js"></script>
+
+</body>
+</html>

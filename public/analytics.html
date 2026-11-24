@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитика — CoffeeManager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>CoffeeManager</h2>
+
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="menu.html">Меню</a>
+            <a href="orders.html">Новый заказ</a>
+            <a href="history.html">История заказов</a>
+            <a href="analytics.html" class="active">Аналитика</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+
+        <h1>Аналитика продаж</h1>
+        <p>Статистика и финансовые показатели кофейни.</p>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3>Выручка за сегодня</h3>
+                <h2 id="todayRevenue">0 ₽</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Выручка за неделю</h3>
+                <h2 id="weekRevenue">0 ₽</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Выручка за месяц</h3>
+                <h2 id="monthRevenue">0 ₽</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Продано товаров</h3>
+                <h2 id="soldProducts">0</h2>
+            </div>
+
+        </div>
+
+        <section class="stat-card" style="margin-top: 25px;">
+            <h2>Выручка за последние 7 дней</h2>
+            <canvas id="revenueChart"></canvas>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+
+</body>
+</html>

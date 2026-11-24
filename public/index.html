@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeManager — Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>CoffeeManager</h2>
+
+<nav>
+    <a href="index.html" class="active">Главная</a>
+    <a href="menu.html">Меню</a>
+    <a href="orders.html">Новый заказ</a>
+    <a href="history.html">История заказов</a>
+    <a href="analytics.html">Аналитика</a>
+</nav>
+    </div>
+
+    <main class="main-content">
+        <h1>Панель управления</h1>
+        <p>Основная статистика кофейни.</p>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3>Общая выручка</h3>
+                <h2 id="revenue">0 ₽</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Количество заказов</h3>
+                <h2 id="orderCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Средний чек</h3>
+                <h2 id="averageCheck">0 ₽</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Популярный товар</h3>
+                <h2 id="popularProduct">Нет данных</h2>
+            </div>
+
+        </div>
+
+        <section class="stat-card" style="margin-top: 25px;">
+            <h2>Добро пожаловать в CoffeeManager!</h2>
+            <p>
+                Система предназначена для управления меню,
+                оформления заказов и анализа продаж кофейни.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

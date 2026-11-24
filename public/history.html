@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История заказов — CoffeeManager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>CoffeeManager</h2>
+
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="menu.html">Меню</a>
+            <a href="orders.html">Новый заказ</a>
+            <a href="history.html" class="active">История заказов</a>
+            <a href="analytics.html">Аналитика</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+
+        <h1>История заказов</h1>
+        <p>Просмотр, поиск и анализ оформленных заказов.</p>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3>Найдено заказов</h3>
+                <h2 id="filteredCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Общая сумма</h3>
+                <h2 id="filteredRevenue">0 ₽</h2>
+            </div>
+
+        </div>
+
+        <section class="stat-card" style="margin-top: 25px;">
+
+            <h2>Поиск и фильтрация</h2>
+
+            <p>Номер заказа</p>
+            <input
+                type="number"
+                id="searchOrder"
+                placeholder="Например, 1"
+                min="1"
+            >
+
+            <p>Дата от</p>
+            <input type="date" id="dateFrom">
+
+            <p>Дата до</p>
+            <input type="date" id="dateTo">
+
+            <p>Минимальная сумма заказа (₽)</p>
+            <input
+                type="number"
+                id="minTotal"
+                placeholder="От"
+                min="0"
+                step="0.01"
+            >
+
+            <p>Максимальная сумма заказа (₽)</p>
+            <input
+                type="number"
+                id="maxTotal"
+                placeholder="До"
+                min="0"
+                step="0.01"
+            >
+
+            <button type="button" id="resetFilters">
+                Сбросить фильтры
+            </button>
+
+        </section>
+
+        <section class="stat-card" style="margin-top: 20px;">
+
+            <h2>Список заказов</h2>
+
+            <button
+                type="button"
+                id="exportExcelButton"
+                style="margin: 15px 0;"
+            >
+                Скачать отчёт для Excel
+            </button>
+
+            <div id="ordersList">
+                Загрузка заказов...
+            </div>
+
+        </section>
+
+        <section class="stat-card" style="margin-top: 20px;">
+
+            <h2>Подробности заказа</h2>
+
+            <div id="orderDetails">
+                Выберите заказ из списка, чтобы посмотреть подробности.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="history.js"></script>
+
+</body>
+</html>
